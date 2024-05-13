@@ -7,6 +7,7 @@ import random
 #Create game
 def better_rps():
     play_again = " "
+    user_choice = " "
 
     while play_again != "n":
         user_choice = input("Pick rock(r), paper(p), or scissors(s): ").strip()
@@ -15,13 +16,15 @@ def better_rps():
         if user_choice == com_choice:
             print("It's a tie!")
             play_again = input("Would you like to play again? (y/n) ")
+            
         
         #If statements are boolean so don't need to explicitly define "true" after statement
-        if win(user_choice, com_choice):
+        if win(user_choice, com_choice) == True:
             print(f"Your choice: {user_choice}")
             print(f"Computer choice: {com_choice}")
             print(f"You win!")
             play_again = input("Would you like to play again? (y/n) ")
+            
         
         #Lose scenario (runs if win() returns false)
         print(f"Your choice: {user_choice}")
