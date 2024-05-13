@@ -22,7 +22,7 @@ def computer_guess(x):
     print(f"Let's goooo I got the number {guess} right")
 
 
-computer_guess(10)
+computer_guess(1000)
 
 
 #Notes:
